@@ -1,0 +1,14 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+   <Target Name="Print some default properties">
+       <Message Text="MSBuildBinPath          = $(MSBuildBinPath)"          />
+       <Message Text="MSBuildExtensionsPath32 = $(MSBuildExtensionsPath32)" />
+       <Message Text="MSBuildExtensionsPath64 = $(MSBuildExtensionsPath64)" />
+       <Message Text="MSBuildVersion          = $(MSBuildVersion)"          />
+       <Message Text="MSBuildProjectFullPath  = $(MSBuildProjectFullPath)"  />
+       <Message Text="MSBuildProjectDirectory = $(MSBuildProjectDirectory)" />
+       <Message Text="MSBuildProjectName      = $(MSBuildProjectName)"      />
+       <Message Text="MSBuildProjectExtension = $(MSBuildProjectExtension)" />
+   </Target>
+
+</Project>
