@@ -1,11 +1,11 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
   <ItemGroup>
-      <source-files Include="src_1.cs;src_2.cs" />
+      <source-files Include="*.cs" />
   </ItemGroup>
 
-  <Target Name="Compile sources">
+   <Target Name="Compile sources">
       <Csc Sources="@(source-files)"/>
-  </Target>
+   </Target>
 
 </Project>
