@@ -1,0 +1,11 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+   <Target Name="Say something"   >
+       <Message Text="Hello world."                                         />
+
+       <Message Text="some text with low importance"    Importance="low"    /> <!-- not printed by default -->
+       <Message Text="some text with normal importance" Importance="normal" />
+       <Message Text="some text with high importance"   Importance="high"   />
+   </Target>
+
+</Project>
