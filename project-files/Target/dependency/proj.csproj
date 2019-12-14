@@ -1,0 +1,22 @@
+<Project
+   DefaultTargets="tgt_2"
+   xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
+>
+
+   <Target Name="tgt_1">
+       <Message Text="Target one is being executed" />
+   </Target>
+
+   <Target Name="tgt_2" DependsOnTargets="tgt_1">
+       <Message Text="Target two is being executed" />
+   </Target>
+
+   <Target Name="tgt_3">
+       <Message Text="Target three is being executed" />
+   </Target>
+
+   <Target Name="tgt_4" DependsOnTargets="tgt_3;tgt_2">
+       <Message Text="Target four is being executed" />
+   </Target>
+
+</Project>
