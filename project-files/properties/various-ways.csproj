@@ -1,0 +1,30 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+   <PropertyGroup>
+   <!-- «Hard coded» property-values: -->
+       <Property-one>42</Property-one>
+       <Property-two>Hello world</Property-two>
+
+   <!-- It's possible to assign C# expressions to properties: -->
+       <time>$([System.DateTime]::Now.ToString("HH:mm:ss"))</time>
+   </PropertyGroup>
+
+   <Target Name="Print some property-possibilites">
+
+   <!-- Reserved property -->
+       <Message Text=" MSBuildBinPath = $(MSBuildBinPath)"                                />
+
+   <!-- Show «hard coded values» -->
+       <Message Text=" Property-one   = $(Property-one)"                                  />
+       <Message Text=" Property-two   = $(Property-two)"                                  />
+
+   <!-- Registry value. The at-sign separates registry-key from value -->
+       <Message Text=" TEMP           = $(registry:HKEY_CURRENT_USER\Environment@TEMP)"   />
+
+   <!-- Use dynamic expressions: -->
+       <Message Text=" time           = $(time)"                                          />
+       <Message Text=" date           = $([System.DateTime]::Now.ToString('yyyy-MM-dd'))" />
+
+   </Target>
+
+</Project>
